@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f7f6f2">
+<meta name="theme-color" content="#0a0b0e">
 <title>Legal — OneRemote</title>
 <meta name="description" content="Privacy Policy and Terms of Service for OneRemote by Savoroo Studio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,18 +11,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#f7f6f2;
-  --card:#ffffff;
-  --ink:#16202f;
-  --ink-soft:#3b465a;
-  --muted:#68728a;
-  --line:#e4dfd5;
-  --line-strong:#d5cec0;
-  --navy:#132a4a;
-  --navy-2:#1d3c66;
-  --gold:#a98a52;
-  --gold-soft:#c8ab77;
-  --gold-pale:#f1e9da;
+  --paper:#0a0b0e;
+  --card:#12131a;
+  --card-2:#171821;
+  --ink:#f2ede2;
+  --ink-soft:#c8c2b4;
+  --muted:#8a8478;
+  --line:#24252e;
+  --line-strong:#3a3b46;
+  --navy:#d4af6a;
+  --navy-2:#e6c78a;
+  --gold:#c9a961;
+  --gold-soft:#e0c48a;
+  --gold-pale:#1c1811;
+  --gold-glow:rgba(212,175,106,.18);
+  --shadow:rgba(0,0,0,.55);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -35,49 +38,56 @@ body{
 body::before{
   content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   background:
-    radial-gradient(900px 420px at 50% -6%, #ffffff 0%, transparent 70%),
-    linear-gradient(180deg,#fbfaf7,#f4f2ed);
+    radial-gradient(1000px 520px at 50% -10%, rgba(212,175,106,.10) 0%, transparent 65%),
+    radial-gradient(800px 500px at 90% 110%, rgba(212,175,106,.05) 0%, transparent 60%),
+    linear-gradient(180deg,#0a0b0e 0%,#08090c 100%);
 }
 img,svg{display:block}
 a{color:var(--navy-2)}
-::selection{background:var(--gold-pale);color:var(--navy)}
+::selection{background:rgba(212,175,106,.28);color:#fff8e6}
 
 .progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:200;
-  background:linear-gradient(90deg,var(--navy),var(--gold));transition:width .1s linear}
+  background:linear-gradient(90deg,var(--navy),var(--gold-soft),#fff2d0);
+  box-shadow:0 0 14px var(--gold-glow);
+  transition:width .1s linear}
 
 .site-header{
   position:sticky;top:0;z-index:120;
-  background:rgba(247,246,242,.86);
-  -webkit-backdrop-filter:blur(14px) saturate(1.4);
-  backdrop-filter:blur(14px) saturate(1.4);
+  background:rgba(10,11,14,.72);
+  -webkit-backdrop-filter:blur(18px) saturate(1.4);
+  backdrop-filter:blur(18px) saturate(1.4);
   border-bottom:1px solid var(--line);
 }
 .header-inner{
   max-width:1120px;margin:0 auto;padding:0 28px;height:70px;
   display:flex;align-items:center;justify-content:space-between;gap:24px;
 }
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy)}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
 .brand:hover{text-decoration:none}
 .brand-mark{
-  width:34px;height:34px;border-radius:8px;display:grid;place-items:center;
-  background:linear-gradient(145deg,var(--navy),var(--navy-2));
-  box-shadow:0 6px 16px -10px rgba(19,42,74,.9);
+  width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(145deg,#1c1a16,#0e0d0a);
+  border:1px solid rgba(212,175,106,.35);
+  box-shadow:0 0 0 1px rgba(212,175,106,.06) inset, 0 8px 24px -14px rgba(212,175,106,.7);
 }
 .brand-mark svg{width:17px;height:17px;stroke:var(--gold-soft);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.brand-name{font-family:'Playfair Display',Georgia,serif;font-size:1.22rem;font-weight:600;letter-spacing:.01em}
-.brand-sub{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:block;margin-top:-2px}
+.brand-name{font-family:'Playfair Display',Georgia,serif;font-size:1.22rem;font-weight:600;letter-spacing:.01em;
+  background:linear-gradient(120deg,#f6e6bf,#d4af6a 45%,#f4e2b6 90%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.brand-sub{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);display:block;margin-top:-2px}
 
 .tabs{position:relative;display:flex;gap:2px;--ix:0px;--iw:0px}
 .tab{
   appearance:none;background:none;border:0;cursor:pointer;
-  font-family:inherit;font-size:.83rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  font-family:inherit;font-size:.83rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
   color:var(--muted);padding:10px 20px 14px;transition:color .3s;white-space:nowrap;
 }
-.tab:hover{color:var(--navy)}
-.tab.active{color:var(--navy)}
+.tab:hover{color:var(--ink-soft)}
+.tab.active{color:var(--gold-soft)}
 .tab-ink{
   position:absolute;left:0;bottom:0;height:2px;width:var(--iw);
-  background:linear-gradient(90deg,var(--gold),var(--gold-soft));
+  background:linear-gradient(90deg,var(--gold),var(--gold-soft),#fff2d0);
+  box-shadow:0 0 12px var(--gold-glow);
   transform:translateX(var(--ix));
   transition:transform .42s cubic-bezier(.65,0,.35,1),width .42s cubic-bezier(.65,0,.35,1);
 }
@@ -89,13 +99,15 @@ a{color:var(--navy-2)}
 
 .doc-head{max-width:820px;margin:0 auto;padding:72px 0 44px;text-align:center}
 .eyebrow{
-  font-size:.7rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  font-size:.7rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;
   color:var(--gold);margin:0 0 16px;
 }
 .doc-head h1{
   font-family:'Playfair Display',Georgia,serif;
   font-size:clamp(2.1rem,5.2vw,3.05rem);font-weight:600;line-height:1.14;
-  letter-spacing:-.015em;color:var(--navy);margin:0 0 22px;
+  letter-spacing:-.015em;margin:0 0 22px;
+  background:linear-gradient(120deg,#f6e6bf 10%,#d4af6a 45%,#f4e2b6 90%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 22px;max-width:230px}
 .rule span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--line-strong))}
@@ -110,7 +122,7 @@ a{color:var(--navy-2)}
 }
 .toc{position:sticky;top:104px}
 .toc-title{
-  font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
   color:var(--gold);margin:0 0 14px;padding-left:15px;
 }
 .toc nav{display:flex;flex-direction:column}
@@ -120,8 +132,8 @@ a{color:var(--navy-2)}
   font-size:.83rem;line-height:1.45;color:var(--muted);text-decoration:none;
   transition:color .28s,border-color .28s,padding-left .28s;
 }
-.toc a:hover{color:var(--navy);border-color:var(--gold-soft);padding-left:18px}
-.toc a.active{color:var(--navy);font-weight:600;border-color:var(--gold)}
+.toc a:hover{color:var(--gold-soft);border-color:var(--gold-soft);padding-left:18px}
+.toc a.active{color:var(--gold-soft);font-weight:600;border-color:var(--gold)}
 
 .content{max-width:760px;min-width:0}
 
@@ -129,20 +141,30 @@ section[id]{scroll-margin-top:104px}
 .doc-section{margin-bottom:38px}
 .doc-section:last-of-type{margin-bottom:0}
 .card{
-  background:var(--card);border:1px solid var(--line);border-radius:8px;
+  position:relative;
+  background:linear-gradient(155deg,var(--card-2) 0%,var(--card) 100%);
+  border:1px solid var(--line);border-radius:10px;
   padding:30px 34px 28px;
-  box-shadow:0 1px 2px rgba(19,42,74,.035), 0 18px 40px -34px rgba(19,42,74,.45);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.02) inset,
+    0 24px 48px -34px var(--shadow),
+    0 0 0 1px rgba(212,175,106,0);
   transition:border-color .35s, box-shadow .35s, transform .35s cubic-bezier(.22,1,.36,1);
 }
 .card:hover{
-  border-color:var(--line-strong);transform:translateY(-2px);
-  box-shadow:0 1px 2px rgba(19,42,74,.04), 0 26px 52px -34px rgba(19,42,74,.5);
+  border-color:rgba(212,175,106,.38);
+  transform:translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.03) inset,
+    0 30px 60px -34px var(--shadow),
+    0 0 0 1px rgba(212,175,106,.10),
+    0 0 40px -18px var(--gold-glow);
 }
 h2{
   display:flex;align-items:baseline;gap:14px;
   font-family:'Playfair Display',Georgia,serif;
   font-size:1.22rem;font-weight:600;letter-spacing:-.005em;
-  color:var(--navy);margin:0 0 16px;line-height:1.35;
+  color:var(--ink);margin:0 0 16px;line-height:1.35;
 }
 h2 .n{
   font-family:'Playfair Display',Georgia,serif;font-size:.82rem;font-weight:600;
@@ -151,33 +173,35 @@ h2 .n{
 h2 .t{flex:1}
 p{margin:0 0 13px}
 p:last-child{margin-bottom:0}
-.muted{color:var(--muted)}
+.muted{color:var(--ink-soft)}
 strong{color:var(--ink);font-weight:600}
-em{font-style:normal;font-weight:600;color:var(--navy)}
+em{font-style:normal;font-weight:600;color:var(--gold-soft)}
 
 ul.doc{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-ul.doc li{position:relative;padding-left:24px;color:var(--muted)}
+ul.doc li{position:relative;padding-left:24px;color:var(--ink-soft)}
 ul.doc li::before{
   content:"";position:absolute;left:2px;top:.66em;
   width:5px;height:5px;background:var(--gold-soft);
+  box-shadow:0 0 8px var(--gold-glow);
   transform:rotate(45deg);
 }
 ul.neg li::before{
-  content:"✕";background:none;transform:none;
+  content:"✕";background:none;transform:none;box-shadow:none;
   top:0;left:2px;width:auto;height:auto;
-  font-size:.72rem;line-height:1.9;color:#b6ad9c;font-weight:700;
+  font-size:.72rem;line-height:1.9;color:#6b6659;font-weight:700;
 }
 ul.neg li{padding-left:22px}
 
 .table-wrap{
-  border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:4px;
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:4px;
+  background:rgba(0,0,0,.18);
 }
 table{width:100%;border-collapse:collapse}
 thead th{
   text-align:left;padding:13px 20px;
-  background:#f3f0e9;color:var(--navy);
-  font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  border-bottom:1px solid var(--line-strong);
+  background:linear-gradient(180deg,#1a1712,#141210);color:var(--gold-soft);
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  border-bottom:1px solid rgba(212,175,106,.22);
 }
 td{
   padding:15px 20px;border-bottom:1px solid var(--line);
@@ -185,50 +209,61 @@ td{
 }
 tbody tr:last-child td{border-bottom:none}
 tbody tr{transition:background .25s}
-tbody tr:hover{background:#fbfaf7}
+tbody tr:hover{background:rgba(212,175,106,.045)}
 td:first-child{width:40%;color:var(--ink);font-weight:600}
-td:last-child{color:var(--muted)}
+td:last-child{color:var(--ink-soft)}
 
 .svc-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));margin-top:6px}
 .svc{
-  padding:17px 18px;border:1px solid var(--line);border-radius:7px;background:#fbfaf7;
-  transition:border-color .3s,transform .3s cubic-bezier(.22,1,.36,1),background .3s;
+  padding:17px 18px;border:1px solid var(--line);border-radius:9px;
+  background:linear-gradient(155deg,#15161d,#101118);
+  transition:border-color .3s,transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
 }
-.svc:hover{border-color:var(--gold-soft);background:#fff;transform:translateY(-2px)}
-.svc h3{margin:0 0 5px;font-size:.9rem;font-weight:600;color:var(--navy);letter-spacing:.01em}
-.svc p{margin:0;font-size:.85rem;color:var(--muted);line-height:1.6}
+.svc:hover{
+  border-color:rgba(212,175,106,.4);
+  transform:translateY(-2px);
+  box-shadow:0 20px 40px -28px var(--shadow),0 0 30px -16px var(--gold-glow);
+}
+.svc h3{margin:0 0 5px;font-size:.9rem;font-weight:600;color:var(--gold-soft);letter-spacing:.02em}
+.svc p{margin:0;font-size:.85rem;color:var(--ink-soft);line-height:1.6}
 
 .callout{
-  margin-top:6px;padding:17px 20px;border-radius:7px;
-  background:var(--gold-pale);border-left:3px solid var(--gold);
+  margin-top:6px;padding:17px 20px;border-radius:9px;
+  background:linear-gradient(155deg,rgba(212,175,106,.09),rgba(212,175,106,.03));
+  border-left:3px solid var(--gold);
+  box-shadow:0 0 30px -18px var(--gold-glow);
   font-size:.9rem;color:var(--ink-soft);line-height:1.68;
 }
-.callout strong{color:var(--navy)}
+.callout strong{color:var(--gold-soft)}
 
 .contact{
-  margin-top:44px;border-radius:10px;padding:38px 34px;text-align:center;
-  background:linear-gradient(150deg,var(--navy),#0d1e36 65%,#122845);
-  border:1px solid rgba(169,138,82,.35);
-  box-shadow:0 30px 60px -40px rgba(19,42,74,.9);
+  margin-top:44px;border-radius:12px;padding:38px 34px;text-align:center;
+  background:
+    radial-gradient(600px 300px at 50% 0%, rgba(212,175,106,.14), transparent 65%),
+    linear-gradient(155deg,#12131a,#0a0b0e 70%);
+  border:1px solid rgba(212,175,106,.28);
+  box-shadow:0 30px 70px -40px var(--shadow), 0 0 60px -28px var(--gold-glow);
 }
 .contact .eyebrow{color:var(--gold-soft);margin-bottom:12px}
 .contact h2{
-  justify-content:center;color:#fff;font-size:1.35rem;margin-bottom:10px;
+  justify-content:center;color:var(--ink);font-size:1.35rem;margin-bottom:10px;
+  background:linear-gradient(120deg,#f6e6bf,#d4af6a 55%,#f4e2b6);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
 }
-.contact p{color:rgba(233,237,247,.7);font-size:.92rem;margin-bottom:22px;max-width:460px;margin-left:auto;margin-right:auto}
+.contact p{color:var(--ink-soft);font-size:.92rem;margin-bottom:22px;max-width:460px;margin-left:auto;margin-right:auto}
 .mail{
   display:inline-flex;align-items:center;gap:10px;
-  padding:13px 26px;border-radius:6px;text-decoration:none;
-  background:linear-gradient(135deg,var(--gold-soft),var(--gold));
-  color:#141d2b;font-weight:600;font-size:.9rem;letter-spacing:.02em;
-  box-shadow:0 16px 34px -20px rgba(169,138,82,1);
+  padding:13px 26px;border-radius:8px;text-decoration:none;
+  background:linear-gradient(135deg,#f2dca6,#c9a961 50%,#a98844);
+  color:#1a1305;font-weight:700;font-size:.9rem;letter-spacing:.02em;
+  box-shadow:0 18px 40px -20px rgba(201,169,97,.9),0 0 0 1px rgba(255,240,200,.25) inset;
   transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
 }
-.mail:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 22px 44px -20px rgba(169,138,82,1)}
-.mail svg{width:16px;height:16px;stroke:#141d2b;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.mail:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 24px 50px -20px rgba(201,169,97,1),0 0 0 1px rgba(255,240,200,.4) inset}
+.mail svg{width:16px;height:16px;stroke:#1a1305;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 
 .site-footer{
-  border-top:1px solid var(--line);background:rgba(255,255,255,.55);
+  border-top:1px solid var(--line);background:rgba(0,0,0,.28);
 }
 .footer-inner{
   max-width:1120px;margin:0 auto;padding:30px 28px 40px;
@@ -237,18 +272,19 @@ td:last-child{color:var(--muted)}
 }
 .footer-links{display:flex;flex-wrap:wrap;gap:22px}
 .footer-links a{color:var(--muted);text-decoration:none;transition:color .28s}
-.footer-links a:hover{color:var(--navy);text-decoration:none}
+.footer-links a:hover{color:var(--gold-soft);text-decoration:none}
 
 .totop{
   position:fixed;right:22px;bottom:22px;z-index:110;
   width:44px;height:44px;border-radius:50%;display:grid;place-items:center;cursor:pointer;
-  background:var(--navy);border:1px solid rgba(169,138,82,.5);
-  box-shadow:0 16px 34px -20px rgba(19,42,74,1);
+  background:linear-gradient(145deg,#17161a,#0c0b0e);
+  border:1px solid rgba(212,175,106,.45);
+  box-shadow:0 16px 34px -20px #000,0 0 22px -10px var(--gold-glow);
   opacity:0;pointer-events:none;transform:translateY(12px);
-  transition:opacity .35s,transform .35s cubic-bezier(.22,1,.36,1),background .3s;
+  transition:opacity .35s,transform .35s cubic-bezier(.22,1,.36,1),box-shadow .3s;
 }
 .totop.show{opacity:1;pointer-events:auto;transform:none}
-.totop:hover{background:var(--navy-2)}
+.totop:hover{box-shadow:0 20px 40px -20px #000,0 0 30px -8px var(--gold-glow)}
 .totop svg{width:17px;height:17px;stroke:var(--gold-soft);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 
 .reveal{opacity:0;transform:translateY(16px);
@@ -263,10 +299,10 @@ td:last-child{color:var(--muted)}
   .toc-title{padding-left:0}
   .toc a{
     border-left:0;border:1px solid var(--line);border-radius:999px;
-    padding:6px 14px;font-size:.78rem;background:#fff;
+    padding:6px 14px;font-size:.78rem;background:#141519;
   }
   .toc a:hover{padding-left:14px;border-color:var(--gold-soft)}
-  .toc a.active{border-color:var(--gold);background:var(--gold-pale)}
+  .toc a.active{border-color:var(--gold);background:rgba(212,175,106,.10)}
 }
 @media (max-width:640px){
   .header-inner{height:auto;padding:14px 20px;flex-direction:column;align-items:stretch;gap:10px}
@@ -277,14 +313,14 @@ td:last-child{color:var(--muted)}
   .doc-head{padding:48px 0 32px}
   .card{padding:24px 20px}
   .contact{padding:30px 22px}
-  .table-wrap{border:none}
+  .table-wrap{border:none;background:transparent}
   table,tbody,tr,td{display:block;width:100%}
   thead{display:none}
   tbody tr{
     padding:15px 17px;margin-bottom:11px;border:1px solid var(--line);
-    border-radius:7px;background:#fbfaf7;
+    border-radius:9px;background:#12131a;
   }
-  tbody tr:hover{background:#f7f4ee}
+  tbody tr:hover{background:#16171d}
   td{border:none;padding:0}
   td:first-child{width:auto;margin-bottom:4px}
   .footer-inner{justify-content:center;text-align:center}
@@ -295,10 +331,13 @@ td:last-child{color:var(--muted)}
 }
 @media print{
   .site-header,.totop,.progress,.toc,.site-footer{display:none}
-  body{background:#fff;font-size:11pt}
+  body{background:#fff;color:#000;font-size:11pt}
+  body::before{display:none}
   .panel{display:block!important}
   .panel + .panel{margin-top:40px;padding-top:30px;border-top:2px solid #000}
-  .card{box-shadow:none;border:1px solid #ccc;page-break-inside:avoid}
+  .card{background:#fff;box-shadow:none;border:1px solid #ccc;page-break-inside:avoid}
+  h2,.brand-name,.doc-head h1,.contact h2{color:#000!important;-webkit-text-fill-color:#000!important;background:none!important}
+  .muted,ul.doc li,td:last-child,.svc p{color:#333!important}
   .contact{background:#fff;border:1px solid #ccc}
   .contact h2,.contact p{color:#000}
   .reveal{opacity:1;transform:none}
@@ -331,13 +370,14 @@ td:last-child{color:var(--muted)}
 
 <main class="shell">
 
+<!-- ===================== PRIVACY ===================== -->
 <div class="panel active" id="panel-privacy" role="tabpanel">
 
   <div class="doc-head">
     <p class="eyebrow">Legal Document</p>
     <h1>Privacy Policy</h1>
     <div class="rule"><span></span><i>◆</i><span></span></div>
-    <p class="doc-meta">OneRemote &nbsp;·&nbsp; Savoroo Studio &nbsp;·&nbsp; Last updated: <b class="lastUpdated">—</b></p>
+    <p class="doc-meta">OneRemote &nbsp;·&nbsp; Savoroo Studio &nbsp;·&nbsp; Last updated: <b>September 22, 2026</b></p>
   </div>
 
   <div class="doc-grid">
@@ -345,14 +385,17 @@ td:last-child{color:var(--muted)}
     <aside class="toc">
       <p class="toc-title">Contents</p>
       <nav>
-        <a href="#p-summary">Summary</a>
-        <a href="#p-collect">Information We Collect</a>
-        <a href="#p-use">How Data Is Used</a>
-        <a href="#p-third">Third-Party Services</a>
-        <a href="#p-not">Data We Do Not Collect</a>
-        <a href="#p-retention">Data Retention</a>
-        <a href="#p-children">Children's Privacy</a>
-        <a href="#p-changes">Changes</a>
+        <a href="#p-summary">I. Summary</a>
+        <a href="#p-collect">II. Information We Collect</a>
+        <a href="#p-use">III. How Data Is Used</a>
+        <a href="#p-photos">IV. Photos &amp; Prank Feature</a>
+        <a href="#p-voice">V. Voice Commands &amp; Microphone</a>
+        <a href="#p-third">VI. Third-Party Services</a>
+        <a href="#p-not">VII. Data We Do Not Collect</a>
+        <a href="#p-security">VIII. Data Security</a>
+        <a href="#p-retention">IX. Retention &amp; Deletion</a>
+        <a href="#p-children">X. Children's Privacy</a>
+        <a href="#p-changes">XI. Changes</a>
         <a href="#p-contact">Contact</a>
       </nav>
     </aside>
@@ -363,9 +406,12 @@ td:last-child{color:var(--muted)}
         <div class="card reveal">
           <h2><span class="n">I</span><span class="t">Summary</span></h2>
           <p class="muted">
-            OneRemote does <strong>not</strong> collect your name, email address, phone number, or any
-            other directly identifying personal information. The app identifies your device using an
-            anonymous device identifier only, and does not require you to create an account.
+            OneRemote does not require you to create an account, and we do not ask you for your name,
+            email address, or phone number. The app identifies your installation using an anonymous
+            device identifier so that features such as the free trial, promotional access, and
+            Lifetime unlock can be applied fairly across reinstalls. Some technical and diagnostic
+            information is processed as described in this policy so the app can function, remain
+            reliable, and continue to be improved.
           </p>
         </div>
       </section>
@@ -373,6 +419,10 @@ td:last-child{color:var(--muted)}
       <section id="p-collect" class="doc-section">
         <div class="card reveal">
           <h2><span class="n">II</span><span class="t">Information We Collect</span></h2>
+          <p class="muted" style="margin-bottom:14px">
+            The categories below describe the information processed by OneRemote and the purpose for
+            which each category is used.
+          </p>
           <div class="table-wrap">
             <table>
               <thead>
@@ -380,28 +430,40 @@ td:last-child{color:var(--muted)}
               </thead>
               <tbody>
                 <tr>
-                  <td>Anonymous device identifier</td>
-                  <td>To manage your free trial and prevent it from resetting if you reinstall the app</td>
+                  <td>Anonymous installation / device identifier</td>
+                  <td>To attach trial eligibility, promotional access, and Lifetime unlock to your installation without requiring an account, and to help prevent trial abuse on reinstall.</td>
                 </tr>
                 <tr>
                   <td>Approximate country / region (derived from IP address, not GPS)</td>
-                  <td>Basic usage analytics</td>
+                  <td>Basic usage analytics and regional diagnostics. We do not request precise location permissions.</td>
                 </tr>
                 <tr>
                   <td>Phone model, operating system version, app version</td>
-                  <td>Diagnosing bugs and compatibility issues</td>
+                  <td>Diagnosing bugs and compatibility issues.</td>
                 </tr>
                 <tr>
-                  <td>App usage duration, feature usage, crash and error reports</td>
-                  <td>Improving app reliability and performance</td>
+                  <td>App usage information (features used, session duration), crash and error logs</td>
+                  <td>Improving reliability, diagnosing failures, and prioritising fixes.</td>
                 </tr>
                 <tr>
-                  <td>Connected TV brand and model (e.g. "Samsung AU7000")</td>
-                  <td>Improving TV compatibility and troubleshooting connection issues</td>
+                  <td>TV brand and model, and connection-related technical information</td>
+                  <td>Improving compatibility with supported TVs and troubleshooting pairing or command issues.</td>
                 </tr>
                 <tr>
-                  <td>Voice / text command input (AI-powered command feature)</td>
-                  <td>Sent to a third-party AI service to interpret your command (e.g. "open YouTube and search for X")</td>
+                  <td>Purchase status and entitlement information for the Lifetime in-app purchase</td>
+                  <td>To unlock and restore Lifetime access. Payments themselves are handled by Google Play — we do not receive your card or bank details.</td>
+                </tr>
+                <tr>
+                  <td>Promotional access code status</td>
+                  <td>To validate a code you choose to redeem, apply the associated access, and detect abuse of the promotional system.</td>
+                </tr>
+                <tr>
+                  <td>Photo selected for the Prank feature (see Section IV)</td>
+                  <td>To display the specific image you selected on your paired TV. The rest of your photo library is not accessed.</td>
+                </tr>
+                <tr>
+                  <td>Voice command input, used only when you choose the voice-command feature (see Section V)</td>
+                  <td>To convert your spoken input into text so it can be interpreted as a command for your TV. We do not intentionally collect or store voice recordings as personal data.</td>
                 </tr>
               </tbody>
             </table>
@@ -413,33 +475,81 @@ td:last-child{color:var(--muted)}
         <div class="card reveal">
           <h2><span class="n">III</span><span class="t">How This Data Is Used</span></h2>
           <ul class="doc">
-            <li>To provide and maintain the free trial, ad-supported temporary unlock, and Lifetime purchase features fairly and reliably.</li>
-            <li>To diagnose crashes and technical problems so they can be fixed.</li>
-            <li>To understand which features are used and how, in order to improve the app.</li>
-            <li>To process natural-language voice and text commands you choose to use, by sending the transcribed text — never audio — to a third-party AI provider for interpretation.</li>
+            <li>To operate the app's core features — TV discovery, pairing, remote commands, input, and scheduling — on your local network.</li>
+            <li>To provide the free trial, the rewarded-ad temporary access option, promotional access codes, and the one-time Lifetime unlock fairly and consistently.</li>
+            <li>To interpret voice commands you choose to use, by converting your spoken input to text.</li>
+            <li>To diagnose crashes and technical problems.</li>
+            <li>To understand which features are used and how, so the app can be improved.</li>
+            <li>To detect misuse of trial, promotional, or purchase mechanisms.</li>
           </ul>
+        </div>
+      </section>
+
+      <section id="p-photos" class="doc-section">
+        <div class="card reveal">
+          <h2><span class="n">IV</span><span class="t">Photos &amp; the Prank Feature</span></h2>
+          <p class="muted">
+            The Prank feature lets you choose an image from your device and display it on your paired TV.
+            The image is chosen through your device's standard system photo picker. OneRemote receives
+            only the specific image you select through that picker — it does not read, index, or
+            receive your broader photo library.
+          </p>
+          <p class="muted">
+            The selected image is used only to deliver the Prank feature — that is, to display it on
+            your paired TV. It is not used for advertising, profiling, or any other purpose. If you do
+            not use the Prank feature, no image is provided to the app.
+          </p>
+        </div>
+      </section>
+
+      <section id="p-voice" class="doc-section">
+        <div class="card reveal">
+          <h2><span class="n">V</span><span class="t">Voice Commands &amp; Microphone</span></h2>
+          <p class="muted">
+            OneRemote uses your device's microphone only when you actively choose to use the
+            voice-command feature. The microphone is not used in the background, and it is not used
+            unless you start a voice command yourself.
+          </p>
+          <p class="muted">
+            The purpose of microphone access is to convert your spoken input into text so that
+            OneRemote can interpret it as a command for your TV (for example, to open an app or
+            perform an action on the TV you are controlling).
+          </p>
+          <p class="muted">
+            We do not intentionally collect or store your voice recordings as personal data. Voice
+            input is not used for advertising, profiling, or any purpose unrelated to the
+            voice-command feature.
+          </p>
+          <p class="muted">
+            The exact technical handling of your voice input — where speech-to-text conversion takes
+            place and whether any part of it is transmitted off your device to complete the
+            conversion or to interpret the resulting command — depends on the voice-command
+            implementation in your version of the app. Where a third-party service is used to
+            complete a voice or command step, that service processes the input only for the purpose
+            of fulfilling your request.
+          </p>
         </div>
       </section>
 
       <section id="p-third" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">IV</span><span class="t">Third-Party Services</span></h2>
+          <h2><span class="n">VI</span><span class="t">Third-Party Services</span></h2>
+          <p class="muted" style="margin-bottom:14px">
+            OneRemote relies on the following third-party providers. Each provider processes data under
+            its own privacy policy in addition to ours.
+          </p>
           <div class="svc-grid">
             <div class="svc">
               <h3>Supabase</h3>
-              <p>Hosts our backend database and server functions that store the anonymous device data described above.</p>
+              <p>Hosts the backend that stores the anonymous installation identifier and related diagnostic records described above, so trial, promotional, and Lifetime entitlements can be managed without user accounts.</p>
             </div>
             <div class="svc">
               <h3>Google Play Billing</h3>
-              <p>Processes all in-app purchases and refunds. We never see or store your payment details — this is handled entirely by Google.</p>
+              <p>Processes the Lifetime in-app purchase, purchase restoration, and refunds. We do not receive or store your payment details.</p>
             </div>
             <div class="svc">
               <h3>Google AdMob</h3>
-              <p>Serves the optional rewarded advertisements you may choose to watch for temporary full access.</p>
-            </div>
-            <div class="svc">
-              <h3>Groq / Google Gemini</h3>
-              <p>Third-party AI providers used to interpret natural-language voice and text commands. Only the text of your command is sent — never audio recordings or other personal data.</p>
+              <p>Serves the optional rewarded advertisements you may choose to watch to unlock temporary access. As part of serving and measuring ads, Google's AdMob SDK may process information such as your device's advertising identifier, IP address, general device information, and ad interaction events, in accordance with Google's own policies and the consent choices available to you.</p>
             </div>
           </div>
         </div>
@@ -447,44 +557,83 @@ td:last-child{color:var(--muted)}
 
       <section id="p-not" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">V</span><span class="t">Data We Do <em>Not</em> Collect</span></h2>
+          <h2><span class="n">VII</span><span class="t">Data We Do <em>Not</em> Collect</span></h2>
           <ul class="doc neg">
-            <li>No name, email address, or phone number.</li>
-            <li>No precise GPS location — only an approximate country derived from IP address.</li>
-            <li>No audio recordings are stored or transmitted — voice input is converted to text on your device first.</li>
-            <li>No access to your photos, contacts, or other apps.</li>
+            <li>We do not ask for or store your name, email address, or phone number.</li>
+            <li>We do not request precise GPS location. Region information, where used, is derived from your IP address at a coarse level.</li>
+            <li>We do not request continuous access to your photo library — only the single image you explicitly select through the system picker for the Prank feature is received by the app.</li>
+            <li>We do not access the microphone in the background, and we do not use it for any purpose other than the voice-command feature that you actively start. Voice recordings are not intentionally collected or retained as personal data beyond what is technically necessary to perform the speech-to-text conversion for the voice-command feature.</li>
+            <li>We do not access your contacts, messages, or call logs.</li>
           </ul>
+        </div>
+      </section>
+
+      <section id="p-security" class="doc-section">
+        <div class="card reveal">
+          <h2><span class="n">VIII</span><span class="t">Data Security</span></h2>
+          <p class="muted">
+            Data transmitted between the app and our backend is sent over encrypted connections (HTTPS/TLS).
+            Access to our backend is restricted, and data stored on our backend is limited to the
+            categories described in this policy. On your device, information such as paired-TV details
+            and settings is stored in the app's private storage area, which other apps cannot read on a
+            standard, unrooted device.
+          </p>
+          <p class="muted">
+            No method of transmission or storage can be guaranteed to be completely secure, and we do not
+            claim otherwise. If you believe your data has been compromised, please contact us using the
+            details below.
+          </p>
         </div>
       </section>
 
       <section id="p-retention" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">VI</span><span class="t">Data Retention</span></h2>
+          <h2><span class="n">IX</span><span class="t">Data Retention &amp; Deletion</span></h2>
           <p class="muted">
-            Anonymous usage and diagnostic data is retained for as long as reasonably necessary to support
-            the purposes described above. You may request deletion of data associated with your device
-            identifier at any time by contacting us with your device identifier, which is available on the
-            app's Settings screen.
+            Information linked to your anonymous installation identifier (trial status, promotional
+            access status, Lifetime entitlement, and related diagnostic records) is retained for as long
+            as reasonably necessary to operate these features and to prevent abuse of trial and
+            promotional systems.
+          </p>
+          <p class="muted">
+            Voice recordings are not intentionally retained as personal data. Voice input exists only
+            long enough to be converted into text for the voice-command feature.
+          </p>
+          <p class="muted">
+            You can request deletion of the data associated with your installation by contacting us at
+            the address in the Contact section. Please include your anonymous device identifier, which
+            is available on the app's Settings screen. After we verify and process your request, we will
+            delete the data associated with that identifier, except where we are required to retain
+            limited records for legal, tax, fraud-prevention, or security reasons (for example, records
+            required to substantiate purchase entitlements).
+          </p>
+          <p class="muted">
+            OneRemote does not currently offer traditional user accounts. There is therefore no
+            account-deletion workflow — deletion requests are handled at the installation level as
+            described above.
           </p>
         </div>
       </section>
 
       <section id="p-children" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">VII</span><span class="t">Children's Privacy</span></h2>
+          <h2><span class="n">X</span><span class="t">Children's Privacy</span></h2>
           <p class="muted">
-            OneRemote is not directed at children under 13, and we do not knowingly collect data from
-            children under 13.
+            OneRemote is a general-audience utility app. It is not directed to children under the age
+            required by applicable law in your region (for example, under 13 in the United States), and
+            we do not knowingly collect personal information from such children. If you believe a child
+            has provided information to us, please contact us so we can address it.
           </p>
         </div>
       </section>
 
       <section id="p-changes" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">VIII</span><span class="t">Changes to This Policy</span></h2>
+          <h2><span class="n">XI</span><span class="t">Changes to This Policy</span></h2>
           <p class="muted">
-            We may update this Privacy Policy from time to time. Changes will be posted on this page with
-            an updated "Last updated" date.
+            We may update this Privacy Policy from time to time. When we do, we will revise the
+            "Last updated" date at the top of this page. We encourage you to review this page
+            periodically.
           </p>
         </div>
       </section>
@@ -493,7 +642,7 @@ td:last-child{color:var(--muted)}
         <div class="contact reveal">
           <p class="eyebrow">Contact</p>
           <h2>Questions About This Policy?</h2>
-          <p>For any question regarding this Privacy Policy or the data associated with your device, contact us.</p>
+          <p>For any question about this Privacy Policy or the data associated with your installation, contact us.</p>
           <a class="mail" href="mailto:savoroostudio@gmail.com">
             <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.8 7.2l8.2 5.8 8.2-5.8"/></svg>
             savoroostudio@gmail.com
@@ -505,13 +654,14 @@ td:last-child{color:var(--muted)}
   </div>
 </div>
 
+<!-- ===================== TERMS ===================== -->
 <div class="panel" id="panel-terms" role="tabpanel">
 
   <div class="doc-head">
     <p class="eyebrow">Legal Document</p>
     <h1>Terms of Service</h1>
     <div class="rule"><span></span><i>◆</i><span></span></div>
-    <p class="doc-meta">OneRemote &nbsp;·&nbsp; Savoroo Studio &nbsp;·&nbsp; Last updated: <b class="lastUpdated">—</b></p>
+    <p class="doc-meta">OneRemote &nbsp;·&nbsp; Savoroo Studio &nbsp;·&nbsp; Last updated: <b>September 22, 2026</b></p>
   </div>
 
   <div class="doc-grid">
@@ -521,13 +671,14 @@ td:last-child{color:var(--muted)}
       <nav>
         <a href="#t-acceptance">1. Acceptance of Terms</a>
         <a href="#t-app">2. What the App Does</a>
-        <a href="#t-purchases">3. Trial, Purchases &amp; Refunds</a>
-        <a href="#t-use">4. Acceptable Use</a>
-        <a href="#t-warranty">5. No Warranty</a>
-        <a href="#t-liability">6. Limitation of Liability</a>
-        <a href="#t-third">7. Third-Party Services</a>
-        <a href="#t-changes">8. Changes to These Terms</a>
-        <a href="#t-termination">9. Termination</a>
+        <a href="#t-purchases">3. Trial, Access &amp; Purchases</a>
+        <a href="#t-promo">4. Promotional Access Codes</a>
+        <a href="#t-use">5. Acceptable Use</a>
+        <a href="#t-warranty">6. No Warranty</a>
+        <a href="#t-liability">7. Limitation of Liability</a>
+        <a href="#t-third">8. Third-Party Services</a>
+        <a href="#t-changes">9. Changes to These Terms</a>
+        <a href="#t-termination">10. Termination</a>
         <a href="#t-contact">Contact</a>
       </nav>
     </aside>
@@ -539,7 +690,7 @@ td:last-child{color:var(--muted)}
           <h2><span class="n">1</span><span class="t">Acceptance of Terms</span></h2>
           <p class="muted">
             By downloading, installing, or using OneRemote ("the app"), you agree to these Terms of
-            Service. If you do not agree, do not use the app.
+            Service. If you do not agree, please do not use the app.
           </p>
         </div>
       </section>
@@ -548,95 +699,132 @@ td:last-child{color:var(--muted)}
         <div class="card reveal">
           <h2><span class="n">2</span><span class="t">What the App Does</span></h2>
           <p class="muted">
-            OneRemote lets you control compatible Samsung Smart TVs from your phone over your local Wi-Fi
-            network, including remote-control functions, app launching, a keyboard input feature,
-            voice and text commands, and scheduled actions.
+            OneRemote is a universal smart-TV remote application for Android. It lets you discover and
+            control compatible Smart TVs on your local network from your phone. Depending on the TV
+            and the supported protocol, available features may include remote-control functions,
+            launching apps, a keyboard/input feature, scheduled actions, the Prank feature
+            (displaying a photo you select on your paired TV), and voice commands that convert your
+            spoken input into text and interpret it as a command for your TV.
+          </p>
+          <p class="muted">
+            Compatibility depends on the TV brand, model, firmware version, and network configuration.
+            Not every feature is available on every supported TV.
           </p>
         </div>
       </section>
 
       <section id="t-purchases" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">3</span><span class="t">Free Trial, Purchases &amp; Refunds</span></h2>
+          <h2><span class="n">3</span><span class="t">Free Trial, Access &amp; Purchases</span></h2>
           <ul class="doc">
-            <li>New installations receive a free trial period with full access to the app's features.</li>
-            <li>After the trial ends, you may unlock temporary full access by watching a rewarded advertisement, or purchase permanent ("Lifetime") access as a one-time in-app purchase.</li>
-            <li>Any discounted pricing offered within the app is offered at our discretion and may not be available to all users or at all times.</li>
+            <li>New installations receive a free trial that provides full access to the app's features for a limited period.</li>
+            <li>After the trial ends, you may unlock temporary access by watching an optional rewarded advertisement, redeem a promotional access code (see Section 4), or purchase permanent ("Lifetime") access.</li>
+            <li>Lifetime access is offered as a <strong>one-time in-app purchase</strong>. It is not a subscription and does not renew. The current price is displayed within the app at the time of purchase and may change.</li>
+            <li>Any promotional or discounted pricing shown inside the app is offered at our discretion and may not be available to all users or at all times.</li>
           </ul>
           <div class="callout">
             <strong>Payments and refunds are handled by Google Play.</strong> All purchases are processed
-            by Google Play Billing and are subject to Google Play's own billing and refund policies.
-            Refund requests must be submitted through Google Play — we do not process payments or issue
-            refunds directly.
+            through Google Play Billing and are subject to Google Play's billing and refund policies, as
+            well as any non-waivable rights you may have under applicable consumer law. Refund requests
+            are generally submitted through Google Play. We do not process payments directly and do not
+            issue refunds outside of Google Play's process.
           </div>
+        </div>
+      </section>
+
+      <section id="t-promo" class="doc-section">
+        <div class="card reveal">
+          <h2><span class="n">4</span><span class="t">Promotional Access Codes</span></h2>
+          <ul class="doc">
+            <li>From time to time, we — or partners and individuals we authorise (for example, influencers or promotional collaborators) — may issue promotional access codes that grant premium access to the app.</li>
+            <li>A code may be distributed publicly or privately, and may be intended for use by a single user, a specific group, or a wider audience, depending on how it is issued. The terms attached to a code when it is distributed describe who may redeem it.</li>
+            <li>Each code is subject to the conditions attached to it, which may include an expiration date, a limited number of redemptions, or device/region restrictions.</li>
+            <li>Promotional codes may not be sold, resold, or used for commercial purposes without our prior written permission. Sharing a code within the scope it was distributed is permitted; monetising it, or redistributing it outside the audience it was issued for, is not.</li>
+            <li>We may revoke promotional access that was obtained through abuse, unauthorised sale or resale, circumvention of the promotional system, or violation of these Terms.</li>
+          </ul>
         </div>
       </section>
 
       <section id="t-use" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">4</span><span class="t">Acceptable Use</span></h2>
+          <h2><span class="n">5</span><span class="t">Acceptable Use</span></h2>
           <p class="muted">You agree not to:</p>
           <ul class="doc neg" style="margin-top:10px">
-            <li>Use the app to interfere with, damage, or gain unauthorized access to any device or network you do not own or have permission to control.</li>
-            <li>Reverse-engineer, decompile, or attempt to extract the app's backend credentials or bypass its trial or purchase mechanisms.</li>
+            <li>Use the app to interfere with, damage, or gain unauthorized access to any TV, device, or network that you do not own or have permission to control.</li>
+            <li>Reverse-engineer, decompile, or attempt to extract the app's backend credentials, or to bypass its trial, promotional, or purchase mechanisms.</li>
             <li>Use the app for any unlawful purpose.</li>
           </ul>
           <p class="muted" style="margin-top:14px">
-            Features such as scheduled or delayed commands — including any "prank"-style features — are
-            intended for use on TVs you own or have permission to control, among people who are aware and
-            consenting participants. They must not be used against anyone without their knowledge or
-            consent in a way that could cause distress.
+            Features that act on the TV at a distance or after a delay — including scheduled actions and
+            the Prank feature — are intended only for TVs and devices you own or are authorized to
+            control, and only for people who are aware of and consenting to the activity. You must not
+            use these features against anyone without their knowledge or consent in a way that could
+            cause distress, alarm, or harm.
+          </p>
+          <p class="muted" style="margin-top:14px">
+            When you use the voice-command feature, you are responsible for what you say and for the
+            commands you issue. Do not use voice commands to attempt anything you would not be
+            permitted to do with the app's other features.
           </p>
         </div>
       </section>
 
       <section id="t-warranty" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">5</span><span class="t">No Warranty</span></h2>
+          <h2><span class="n">6</span><span class="t">No Warranty</span></h2>
           <p class="muted">
-            The app is provided "as is" without warranties of any kind. We do not guarantee that TV
-            discovery, pairing, or remote commands will work reliably with every TV model, firmware
-            version, or network configuration. Background scheduling reliability can vary by phone
-            manufacturer and battery-optimization settings outside our control.
+            The app is provided "as is" and "as available" without warranties of any kind, whether
+            express or implied, to the extent permitted by law. We do not warrant that TV discovery,
+            pairing, remote commands, scheduled actions, voice commands, or any other feature will work
+            with every TV brand, model, firmware version, protocol implementation, or network
+            configuration. Voice recognition accuracy may vary depending on your device, your
+            environment, and the language or phrasing you use. Background scheduling reliability can
+            vary based on your phone manufacturer and battery-optimisation settings outside our
+            control.
           </p>
         </div>
       </section>
 
       <section id="t-liability" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">6</span><span class="t">Limitation of Liability</span></h2>
+          <h2><span class="n">7</span><span class="t">Limitation of Liability</span></h2>
           <p class="muted">
-            To the maximum extent permitted by law, Savoroo Studio is not liable for any indirect,
-            incidental, or consequential damages arising from your use of the app, including but not
-            limited to TV settings changed unexpectedly, missed scheduled actions, or reliance on
-            inaccurate device-state information — for example, a displayed volume level may reflect the
-            app's last known value rather than the TV's true live state where the TV's protocol does not
-            support live state queries.
+            To the maximum extent permitted by applicable law, Savoroo Studio is not liable for any
+            indirect, incidental, special, or consequential damages arising from your use of the app.
+            This includes, without limitation, TV settings changed unexpectedly, missed or delayed
+            scheduled actions, display of an image you chose to send via the Prank feature, commands
+            issued via voice that produced an unintended result, and reliance on displayed device
+            state where the underlying TV protocol does not support live state queries (for example,
+            a displayed volume level may reflect the app's last known value rather than the TV's true
+            current state).
+          </p>
+          <p class="muted">
+            Nothing in these Terms limits any liability that cannot be limited under applicable law.
           </p>
         </div>
       </section>
 
       <section id="t-third" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">7</span><span class="t">Third-Party Services</span></h2>
+          <h2><span class="n">8</span><span class="t">Third-Party Services</span></h2>
           <p class="muted">
-            The app relies on third-party services. Your use of features relying on these services is also
-            subject to those providers' own terms.
+            The app relies on third-party services. Your use of features that depend on these services
+            is also subject to the applicable provider's terms and policies.
           </p>
           <div class="svc-grid" style="margin-top:14px">
-            <div class="svc"><h3>Google Play Billing</h3><p>In-app purchases, billing and refunds.</p></div>
-            <div class="svc"><h3>Google AdMob</h3><p>Optional rewarded advertisements.</p></div>
-            <div class="svc"><h3>Backend Hosting</h3><p>Anonymous device and diagnostic data.</p></div>
-            <div class="svc"><h3>AI Providers</h3><p>Voice and text command interpretation.</p></div>
+            <div class="svc"><h3>Google Play Billing</h3><p>In-app purchase of Lifetime access, purchase restoration, and refunds.</p></div>
+            <div class="svc"><h3>Google AdMob</h3><p>Optional rewarded advertisements for temporary access.</p></div>
+            <div class="svc"><h3>Supabase</h3><p>Backend hosting for anonymous installation data and entitlements.</p></div>
           </div>
         </div>
       </section>
 
       <section id="t-changes" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">8</span><span class="t">Changes to These Terms</span></h2>
+          <h2><span class="n">9</span><span class="t">Changes to These Terms</span></h2>
           <p class="muted">
-            We may update these Terms from time to time. Continued use of the app after changes are posted
+            We may update these Terms from time to time. When we do, we will revise the "Last updated"
+            date at the top of this page. Continued use of the app after updated Terms are posted
             constitutes acceptance of the updated Terms.
           </p>
         </div>
@@ -644,10 +832,10 @@ td:last-child{color:var(--muted)}
 
       <section id="t-termination" class="doc-section">
         <div class="card reveal">
-          <h2><span class="n">9</span><span class="t">Termination</span></h2>
+          <h2><span class="n">10</span><span class="t">Termination</span></h2>
           <p class="muted">
-            We may suspend or terminate access to the app's backend services for accounts or devices found
-            to be abusing promotional codes or trial mechanisms, or attempting to circumvent purchase
+            We may suspend or terminate access to the app's backend services for installations found to
+            be abusing promotional codes or trial mechanisms, or attempting to circumvent purchase
             requirements.
           </p>
         </div>
@@ -657,7 +845,7 @@ td:last-child{color:var(--muted)}
         <div class="contact reveal">
           <p class="eyebrow">Contact</p>
           <h2>Questions About These Terms?</h2>
-          <p>For any question regarding these Terms of Service, contact us.</p>
+          <p>For any question about these Terms of Service, contact us.</p>
           <a class="mail" href="mailto:savoroostudio@gmail.com">
             <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.8 7.2l8.2 5.8 8.2-5.8"/></svg>
             savoroostudio@gmail.com
@@ -696,12 +884,7 @@ td:last-child{color:var(--muted)}
   var progress  = document.getElementById('progress');
   var toTop     = document.getElementById('totop');
 
-  var today = new Date().toLocaleDateString('en-US', {
-    year: 'numeric', month: 'long', day: 'numeric'
-  });
-  Array.prototype.forEach.call(document.querySelectorAll('.lastUpdated'), function (el) {
-    el.textContent = today;
-  });
+  /* Footer year stays dynamic. Legal "Last updated" is now static (in the markup). */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
